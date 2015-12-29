@@ -1,0 +1,4 @@
+*.pyc
+/music/
+\music\
+urltest.py
