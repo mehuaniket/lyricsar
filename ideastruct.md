@@ -19,3 +19,34 @@
    functions.
 [+]what type attributes is received by lyricsmint?
    -all metadata about song only.
+[+]at this point in time,how the the plugin files work[basic definition]
+   any file in plugin basically four function mention following:
+  =>__init__
+  =>get_search
+  =>get_link
+  =>get_lyrics
+   all output return string value.
+  -__init__:in this initialize class with search url and also provide mp3
+    metadata that useful to build search url.
+
+  -get_search:basically this function is return url that fetches the  suggestion
+   result from the website.
+
+  -get_link:function provide link from suggestion result and pass it for next
+   operation
+
+  -get_lyrics:this function provide lyrics by traversing the page data provide
+   by link that return from the get_link() function
+
+
+[+]now i need to complete pagegetter class that basically necessary for download
+   any page from website by given url
+
+[+]my best try is is design modules that are undependable from each Other
+   as my view that is great thing for structural design.
+
+[+]next question is what are the function in the pagegetter.py ??
+
+[+]for now,i think that is only one pretty function that necessary.
+
+[+]function take url as argument and provide html data on the request.

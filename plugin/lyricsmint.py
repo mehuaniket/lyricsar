@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 from filetest import filetest
+import string
 class lyricsmint:
     """ this plugin provide lyrics from lyricsmint.com"""
     def __init__(self,songtag):
@@ -7,11 +8,11 @@ class lyricsmint:
         self.search_url="http://www.lyricsmint.com/search?q="
 
 
-    def do_search(self):
+    def get_search(self):
         """do_search function make a url from title and url"""
         self.title=tag['title'].split()
         url=self.search_url+self.title[0]
-        return url
+        return str(url)
 
     def get_link(self,searchpage):
         """get_link received a searchpage page that fetch from url provide by
@@ -22,7 +23,7 @@ class lyricsmint:
         for block in post:
             linklist=block.find_all("a")
             if len(linklist)>0:
-                return linklist[0].get('href')
+                return str(linklist[0].get('href'))
 
 
     def get_lyrics(self,lyricspage):
@@ -32,8 +33,7 @@ class lyricsmint:
         self.soup = BeautifulSoup(html_lyrics, 'html.parser')
         songlyric=self.soup.find_all("div", id="lyric")
         self.lyrics= songlyric[0].find_all("p")
-        return self.lyrics[0]
-
+        return str(self.lyrics[0])
 
 
 
@@ -56,9 +56,14 @@ if __name__=="__main__":
          'bitrate': 128}
     lyrics_mint=lyricsmint(tag)
     file_test=filetest("test\Search results for tum hi ho.html")
-    print lyrics_mint.do_search()
+    print lyrics_mint.get_search()
     file=file_test.read()
     print lyrics_mint.get_link(file)
     file_test=filetest("test\MERI AASHIQUI LYRICS - Aashiqui 2.html")
     file=file_test.read()
-    print lyrics_mint.get_lyrics(file)
+    lyric=lyrics_mint.get_lyrics(file)
+    lyric=string.replace(lyric,"<br>"," ")
+    lyric=string.replace(lyric,"</br>"," ")
+    lyric=string.replace(lyric,"<p>"," ")
+    lyric=string.replace(lyric,"</p>"," ")
+    print lyric
