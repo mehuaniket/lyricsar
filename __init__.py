@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 from lib import filetest
+
 from .tinytag import TinyTag, TinyTagException, ID3, Ogg, Wave, Flac
 from filetest import filetest
 
