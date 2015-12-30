@@ -6,3 +6,6 @@ urltest.py
 /test/
 /bs4/
 \bs4\
+/plugin/bs4/
+\plugin\bs4\
+plugin\filetest.py

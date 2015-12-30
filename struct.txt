@@ -1,8 +1,0 @@
-[+]first i tell you that switch to the second commit and after read this file.
-   give you best idea what the hell happening here.
-[+]after primary success of offline success now i try to structure whole idea
-   and find possible class that easy to maintain and add module that find lyrics
-   from multiple website.
-[+]first i check success of results online and check that program  is success
-   give effective result or what?!
-[+]
