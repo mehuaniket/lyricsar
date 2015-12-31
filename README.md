@@ -6,6 +6,7 @@
  * Introduction
  * Requirements
  * Installation
+ * Contribution
  * Configuration
 
 ####Introduction
@@ -24,9 +25,13 @@
 
        ```
        $ apt-get install python-bs4
+
        or
+
        $ easy_install beautifulsoup4
+
        or
+
        $ pip install beautifulsoup4
        ```
 
@@ -39,11 +44,12 @@
 
        ```
        $python lyricsar.py
+
        ```
 
    -and for this version you also need to specify name or path of mp3.!!(sorry)
 
-       ```python
+       ```Python
        tag = tinytag.TinyTag.get('music\Bin Tere (Reprise) .mp3',image=True)
        ```
 
@@ -51,3 +57,8 @@
      anywhere
 
    -i also describe project structure in ideastruct.md file
+
+####Contribution
+----------------
+-for now you can add more plugin to project that is one of the important thing
+-for understand the plugin structure refer the plugin.md in plugin folder
