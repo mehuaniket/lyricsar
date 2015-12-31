@@ -21,7 +21,7 @@
 ####Requirements
 ----------------
   - you need to install BeautifulSoup library.
-  
+
        ```
        $ apt-get install python-bs4
        or
@@ -29,20 +29,20 @@
        or
        $ pip install beautifulsoup4
        ```
-       
+
   - it's great if you use ubuntu or other linux flavour!
 
 ####Installation
 ----------------
 
    -it's easy run script from terminal name lyricsar.
-   
+
        ```
        $python lyricsar.py
        ```
-       
+
    -and for this version you also need to specify name or path of mp3.!!(sorry)
-      
+
        ```python
        tag = tinytag.TinyTag.get('music\Bin Tere (Reprise) .mp3',image=True)
        ```
