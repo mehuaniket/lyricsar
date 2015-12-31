@@ -1,17 +1,20 @@
 from bs4 import BeautifulSoup
 from filetest import filetest
 import string
+import sys
+
+
 class lyricsmint:
     """ this plugin provide lyrics from lyricsmint.com"""
-    def __init__(self,songtag):
+    def __init__(self,title,songtag):
         self.tag=songtag
         self.search_url="http://www.lyricsmint.com/search?q="
-
+        self.title=title
+        print self.title
 
     def get_search(self):
         """do_search function make a url from title and url"""
-        self.title=tag['title'].split()
-        url=self.search_url+self.title[0]
+        url=self.search_url+self.title
         return str(url)
 
     def get_link(self,searchpage):
@@ -54,7 +57,7 @@ if __name__=="__main__":
          'duration': 307.5054509861498,
          'samplerate': 44100,
          'bitrate': 128}
-    lyrics_mint=lyricsmint(tag)
+    lyrics_mint=lyricsmint("meherbaan",tag)
     file_test=filetest("test\Search results for tum hi ho.html")
     print lyrics_mint.get_search()
     file=file_test.read()

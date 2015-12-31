@@ -50,3 +50,13 @@
 [+]for now,i think that is only one pretty function that necessary.
 
 [+]function take url as argument and provide html data on the request.
+
+[+]now time to add class that process string in way we want!
+
+[+]now ,now i only add makeHTML function that process the html_doc and give pure
+string.
+
+[+]i also add processTITLE function that process the title of string and make it
+ simple that can increase chance of effective result.
+[+]implement main module name lyricsar.py properly
+[+]now try to solve problem with pagegetter class that seems not working
