@@ -3,7 +3,7 @@ class strprocess:
     """add all extra processing method """
     def __init__(self):
         self.data=""
-        self.tags=["</p>","</br>","<br>","<p>","</P>"]
+        self.tags=["</p>","</br>","<br/>","<br>","<p>","</P>"]
         self.marks=["/","?","-","!","@","#","$","%","^","*","(",")",";","{","}","~"]
     def makehtml(self,data):
         self.data="<"+"html"+">"

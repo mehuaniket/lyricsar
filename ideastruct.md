@@ -1,11 +1,14 @@
 [+]first I tell you best idea to understand this project, switch to the second
    commit and after read this file. give you best idea what the hell happening
    here.{happy traversing :)}
+
 [+]after primary offline success now, I try to structure whole idea
    and find possible class that easy to maintain and add module that find lyrics
    from multiple website.
-[+]first I check success of results online and check that program  is success
+
+[+]first I check success of results online and check that module is success
    give effective result or what?!
+
 [+]I add [plugin] folder that is for python modules that have basic structure
     about what they do in other word basic definition
     following is basic functions of that module.
@@ -17,8 +20,11 @@
 
 [+]it means first job is to make lyricsmint module that work with above basic
    functions.
+
 [+]what type attributes is received by lyricsmint?
    -all metadata about song only.
+   -and title text only
+
 [+]at this point in time,how the the plugin files work[basic definition]
    any file in plugin basically four function mention following:
   =>__init__
@@ -58,5 +64,9 @@ string.
 
 [+]i also add processTITLE function that process the title of string and make it
  simple that can increase chance of effective result.
-[+]implement main module name lyricsar.py properly
-[+]now try to solve problem with pagegetter class that seems not working
+
+[+]implement main module name lyricsar.py properly.
+
+[+]now try to solve problem with pagegetter class that seems not working!
+
+[+]

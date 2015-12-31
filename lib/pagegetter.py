@@ -1,4 +1,4 @@
-import urllib
+
 import urllib2
 import sys
 class pagegetter:
@@ -10,13 +10,13 @@ class pagegetter:
    def get_pagedata(self,url):
        try:
            self.url=url
-           req = urllib2.Request(self.url,self.headers)
-           response = urllib2.urlopen(req)
-           the_page = response.read()
+           req = urllib2.urlopen(self.url)
+           #response = urllib2.urlopen(req)
+           the_page = req.read()
            return the_page
        except(urllib2.URLError,urllib2.HTTPErrorProcessor):
-           print "URL error"
-       
+           return  "URL error"
+
 
 
 
@@ -25,4 +25,5 @@ class pagegetter:
 #===================================testing====================================
 if __name__=="__main__":
     pageget=pagegetter()
-    print pageget.get_pagedata("http://www.lyricsmint.com/2013/03/tum-hi-ho-aashiqui-2.html")
+    url="http://www.lyricsmint.com/2013/03/tum-hi-ho-aashiqui-2.html"
+    print pageget.get_pagedata(url)

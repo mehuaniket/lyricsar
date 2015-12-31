@@ -21,6 +21,9 @@ class lyricsmint:
         """get_link received a searchpage page that fetch from url provide by
         do_search ,and give user a link of page that have lyrics """
         html_search=searchpage
+        if "html_search"=="URL error":
+            print "no links"
+            return "no links"
         self.search = BeautifulSoup(html_search, 'html.parser')
         post=self.search.find_all("div", class_="post-title")
         for block in post:
@@ -30,6 +33,9 @@ class lyricsmint:
 
 
     def get_lyrics(self,lyricspage):
+        if lyricspage=="URL error":
+            print "no lyrics"
+            return "no lyrics"
         """ get_lyrics received a lyricspagepage that fetch fro url provide by
         get_link ,and give user a lyrics user wish"""
         html_lyrics=lyricspage
