@@ -49,20 +49,20 @@ class lyricsmint:
 
 #================================ tesing =======================================
 if __name__=="__main__":
-    tag={'album': u'Bang Bang - Single',
-         'audio_offset': 116354,
-         'artist': u'Ash King, Shilpa Rao & Shekhar Ravjiani',
-         'track': None,
-         'title': u'Meherbaan - Bang Bang - WapKing.Cc',
-         'track_total': None,
-         'channels': 2,
-         'genre': u'Bollywood',
-         'filesize': 5025278,
-         'year': u'2014',
-         'duration': 307.5054509861498,
-         'samplerate': 44100,
-         'bitrate': 128}
-    lyrics_mint=lyricsmint("meherbaan",tag)
+    # tag={'album': u'Bang Bang - Single',
+    #      'audio_offset': 116354,
+    #      'artist': u'Ash King, Shilpa Rao & Shekhar Ravjiani',
+    #      'track': None,
+    #      'title': u'Meherbaan - Bang Bang - WapKing.Cc',
+    #      'track_total': None,
+    #      'channels': 2,
+    #      'genre': u'Bollywood',
+    #      'filesize': 5025278,
+    #      'year': u'2014',
+    #      'duration': 307.5054509861498,
+    #      'samplerate': 44100,
+    #      'bitrate': 128}
+    lyrics_mint=lyricsmint("meherbaan")
     file_test=filetest("test\Search results for tum hi ho.html")
     print lyrics_mint.get_search()
     file=file_test.read()
