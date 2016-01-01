@@ -69,4 +69,17 @@ string.
 
 [+]now try to solve problem with pagegetter class that seems not working!
 
-[+]
+[+]delete checkout branch and create new branch for name (cmd)
+
+[+]branch cmd target is redefined the communication beetween modules that is
+   is better for easy to understand structure of the project and also it's
+   help the new user ,he need only understand the working of plugin that give
+   him/her full idea about and starting to write plugin for project.
+
+[+]that is big challenge but not impossible,first challenge is to defined all
+   what they receive and what they have to return.
+
+[+]also i need to add small intelligence that properly find what is title of the
+   song and remove other words or URL from the title.
+
+[+]first i try to remove dependency of tinytag library from lyricsar and is work on commandline argument.

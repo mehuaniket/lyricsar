@@ -33,6 +33,7 @@
        or
 
        $ pip install beautifulsoup4
+
        ```
 
   - it's great if you use ubuntu or other linux flavour!
@@ -49,8 +50,10 @@
 
    -and for this version you also need to specify name or path of mp3.!!(sorry)
 
-       ```Python
+       ```python
+
        tag = tinytag.TinyTag.get('music\Bin Tere (Reprise) .mp3',image=True)
+
        ```
 
    -it's bit complicate but i'm working on making command that simply run from
