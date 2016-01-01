@@ -94,3 +94,11 @@ problem when we get title from a song and some time things going complicated.
 
 [+] and removing that whole idea of tinytag now i can concentrate on commandline
    feature and add new type of plugin.
+
+[+]first i need to handle all possible error in pagegetter class
+   error should come out in informative way.
+
+[+]but first i should merge the cmd repo with master becuase i change whole idea
+   of project for moment.
+
+[+]i tag it "0.2.0-alpha"

@@ -1,6 +1,6 @@
 #lyricsar version 0.1.0
 
-###CONTENTS OF THIS FILE
+##CONTENTS OF THIS FILE
 ---------------------
 
  * Introduction
@@ -9,7 +9,7 @@
  * Contribution
  * Configuration
 
-####Introduction
+###Introduction
 ----------------
   - project have very simple purpose that fetches lyrics from the the specific
     website
@@ -19,7 +19,7 @@
     and pass the title of mp3 directly.
   - this version is for developer's only because it's not easy to use! :)
 
-####Requirements
+###Requirements
 ----------------
   - you need to install BeautifulSoup library.
 
@@ -38,7 +38,7 @@
 
   - it's great if you use ubuntu or other linux flavour!
 
-####Installation
+###Installation
 ----------------
 
    -it's easy run script from terminal name lyricsar.
@@ -58,7 +58,8 @@
 
    -it's bit complicate but i'm working on making command that simply run from anywhere
 
-   -i also describe project structure in ideastruct.md file
+   -i also describe all decision and ideas about projec in ideastruct.md file
+    i love to write this type of file.
 
 ####Contribution
 ----------------
