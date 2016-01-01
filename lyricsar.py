@@ -3,6 +3,7 @@ from lib import tinytag
 from lib import strprocess
 from lib import pagegetter
 from lib import filetest
+import sys
 
 #first i would like to that this project is development phase and that's why
 #i comment in specific way that give a information about program flow.
@@ -22,7 +23,9 @@ pg=pagegetter.pagegetter()
 
 #============================plugin class init==================================
 #following lines are process the title and make it song name to pass pluginclass
-title=tag.title
+#title=tag.title
+title=sys.argv[1]
+print title
 title=sp.removemarks(title).split()[0]
 #initialize lyricsmint class that used to process page and get lyrics .
 lm=lyricsmint.lyricsmint(title,tag)
@@ -37,8 +40,8 @@ print search_link
 
 #===============================================================================
 #this block is get lyrics from INTERNET
-search_page=pg.get_pagedata(search_link)
-
+# search_page=pg.get_pagedata(search_link)
+#
 link=lm.get_link(search_page)
 print link
 lyrics_page=pg.get_pagedata(link)
