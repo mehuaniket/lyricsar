@@ -9,7 +9,7 @@ import sys
 #i comment in specific way that give a information about program flow.
 #===============================get tags from mp3===============================
 
-tag = tinytag.TinyTag.get('music\Bin Tere (Reprise) .mp3',image=True)
+#tag = tinytag.TinyTag.get('music\Bin Tere (Reprise) .mp3',image=True)
 #print tag
 #===============================================================================
 
@@ -26,9 +26,8 @@ pg=pagegetter.pagegetter()
 #title=tag.title
 title=sys.argv[1]
 print title
-title=sp.removemarks(title).split()[0]
 #initialize lyricsmint class that used to process page and get lyrics .
-lm=lyricsmint.lyricsmint(title,tag)
+lm=lyricsmint.lyricsmint(title)
 
 #===============================================================================
 
@@ -40,8 +39,7 @@ print search_link
 
 #===============================================================================
 #this block is get lyrics from INTERNET
-# search_page=pg.get_pagedata(search_link)
-#
+search_page=pg.get_pagedata(search_link)
 link=lm.get_link(search_page)
 print link
 lyrics_page=pg.get_pagedata(link)

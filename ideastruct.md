@@ -82,4 +82,15 @@ string.
 [+]also i need to add small intelligence that properly find what is title of the
    song and remove other words or URL from the title.
 
-[+]first i try to remove dependency of tinytag library from lyricsar and is work on commandline argument.
+[+]first i try to remove dependency of tinytag library from lyricsar and is work
+    on commandline argument.
+
+[+]now i think i should remove tinytag dependency from project because it causes
+problem when we get title from a song and some time things going complicated.
+
+[+]i remove all tinytag dependency or tag dictionary .
+
+[+]when we want add that feature is simply we do with add extra module .
+
+[+] and removing that whole idea of tinytag now i can concentrate on commandline
+   feature and add new type of plugin.

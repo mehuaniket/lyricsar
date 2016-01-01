@@ -6,8 +6,7 @@ import sys
 
 class lyricsmint:
     """ this plugin provide lyrics from lyricsmint.com"""
-    def __init__(self,title,songtag):
-        self.tag=songtag
+    def __init__(self,title):
         self.search_url="http://www.lyricsmint.com/search?q="
         self.title=title
         print self.title
