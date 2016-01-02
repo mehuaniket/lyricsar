@@ -102,3 +102,7 @@ problem when we get title from a song and some time things going complicated.
    of project for moment.
 
 [+]i tag it "0.2.0-alpha"
+
+
+[+]i add test folder that really help you when you want  testing lyricsmint.py
+module with out the INTERNET

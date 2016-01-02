@@ -12,13 +12,13 @@ class lyricsmint:
         print self.title
 
     def get_search(self):
-        """do_search function make a url from title and url"""
+        """get_search function make a url from title and url"""
         url=self.search_url+self.title
         return str(url)
 
     def get_link(self,searchpage):
-        """get_link received a searchpage page that fetch from url provide by
-        do_search ,and give user a link of page that have lyrics """
+        """get_link received a searchpage page that fetch page from url provide
+         by do_search ,and give user a link of page that have lyrics """
         html_search=searchpage
         if "html_search"=="URL error":
             print "no links"
@@ -63,11 +63,11 @@ if __name__=="__main__":
     #      'samplerate': 44100,
     #      'bitrate': 128}
     lyrics_mint=lyricsmint("meherbaan")
-    file_test=filetest("test\Search results for tum hi ho.html")
+    file_test=filetest("test\lyricsmint\Search results for tum hi ho.html")
     print lyrics_mint.get_search()
     file=file_test.read()
     print lyrics_mint.get_link(file)
-    file_test=filetest("test\MERI AASHIQUI LYRICS - Aashiqui 2.html")
+    file_test=filetest("test\lyricsmint\MERI AASHIQUI LYRICS - Aashiqui 2.html")
     file=file_test.read()
     lyric=lyrics_mint.get_lyrics(file)
     lyric=string.replace(lyric,"<br>"," ")

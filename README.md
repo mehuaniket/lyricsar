@@ -65,3 +65,5 @@
 ----------------
 -for now you can add more plugin to project that is one of the important thing
 -for understand the plugin structure refer the plugin.md in plugin folder
+-you also understand the structure with just seeing commit because when you see
+commit you can get commentary of changes from changes in ideastruct.md file 

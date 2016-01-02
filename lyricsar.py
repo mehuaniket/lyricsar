@@ -5,13 +5,11 @@ from lib import pagegetter
 from lib import filetest
 import sys
 
-#first i would like to that this project is development phase and that's why
-#i comment in specific way that give a information about program flow.
-#===============================get tags from mp3===============================
+#first i would like to that this project is in development phase and that's why
+#i make block with comment tag in specific way that give a information about
+# lines of code inside
 
-#tag = tinytag.TinyTag.get('music\Bin Tere (Reprise) .mp3',image=True)
-#print tag
-#===============================================================================
+
 
 #=================================class init====================================
 #this class have function that can process string object in way we need
