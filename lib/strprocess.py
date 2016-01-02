@@ -10,6 +10,10 @@ class strprocess:
         self.data=self.data+data
         self.data=self.data+"<"+"/html"+">"
 
+    def addplus(self,title):
+        self.title=string.replace(title,"-","+")
+        return self.title
+
     def removeHTML(self,page):
         self.page=page
         for tag in self.tags:

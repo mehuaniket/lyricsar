@@ -23,7 +23,8 @@ pg=pagegetter.pagegetter()
 #following lines are process the title and make it song name to pass pluginclass
 #title=tag.title
 title=sys.argv[1]
-print title
+title=sp.addplus(title)
+
 #initialize lyricsmint class that used to process page and get lyrics .
 lm=lyricsmint.lyricsmint(title)
 

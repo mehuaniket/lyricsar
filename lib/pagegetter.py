@@ -16,6 +16,8 @@ class pagegetter:
            return the_page
        except(urllib2.URLError,urllib2.HTTPErrorProcessor):
            return  "URL error"
+       except:
+           return "URL error" 
 
 
 
