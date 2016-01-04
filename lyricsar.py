@@ -1,15 +1,23 @@
 from plugin import lyricsmint
-from lib import tinytag
-from lib import strprocess
-from lib import pagegetter
-from lib import filetest
+from utility import tinytag
+from utility import strprocess
+from utility import pagegetter
+from utility import filetest
 import sys
+import string
 
 #first i would like to that this project is in development phase and that's why
 #i make block with comment tag in specific way that give a information about
 # lines of code inside
+#===============================================================================
+#load available plugin from plugin.conf
+plugin=[]
+f_plugin=open('plugin.txt','r')
+for line in f_plugin:
+    line=string.replace(line,'\n',"")
+    plugin.append(line)
 
-
+#===============================================================================
 
 #=================================class init====================================
 #this class have function that can process string object in way we need
@@ -33,16 +41,30 @@ lm=lyricsmint.lyricsmint(title)
 #==============================provide search URL===============================
 search_link=lm.get_search()
 print search_link
-#===============================================================================
 
+
+
+
+#===============================================================================
+#============================load object on fly=================================
+for url in plugin:
+    find=string.find(search_link,url)
+    if find>-1:
+        break;
+print url
+
+#=======================load compatible module on the fly=======================
+creator="gm="+url+"."+url+"('"+title+"')"
+exec(creator)
+#===============================================================================
 
 #===============================================================================
 #this block is get lyrics from INTERNET
 search_page=pg.get_pagedata(search_link)
-link=lm.get_link(search_page)
+link=gm.get_link(search_page)
 print link
 lyrics_page=pg.get_pagedata(link)
-lyrics=lm.get_lyrics(lyrics_page)
+lyrics=gm.get_lyrics(lyrics_page)
 lyrics=sp.removeHTML(lyrics)
 print lyrics
 #===============================================================================

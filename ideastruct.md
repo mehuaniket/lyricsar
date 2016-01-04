@@ -104,5 +104,11 @@ problem when we get title from a song and some time things going complicated.
 [+]i tag it "0.2.0-alpha"
 
 
-[+]i add test folder that really help you when you want  testing lyricsmint.py
-module with out the INTERNET
+[+]i add test folder that really help you when you want  testing lyricsmint.py with out the INTERNET(removed)
+
+[+]basic dynamic plugin loading is working, now trying make syntactically
+correct  that remove errors.
+
+[+]i will make plugin of google that search lyrics with title and other query user want ,find link from that searchpage and find lyrics.inshort first two function is moved to the google module.
+
+[+]that give us speed to making module for other  website .
