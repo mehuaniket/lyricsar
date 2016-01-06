@@ -39,39 +39,40 @@
 ###Installation
 ----------------
 
-   -it's easy run script from terminal name lyricsar.
+   - it's easy run script from terminal name lyricsar.
 
        ```
+       
        $python lyricsar.py
 
        ```
 
-   -and for this version you also need to give name in commandline.!!
+   - and for this version you also need to give name in commandline.!!
 
-       ```python
+       ```
 
        $python lyricsar.py [title of the song]
 
        ```
 
-   -it's bit complicate FOR ME  but i'm working on making command that simply run from anywhere
+   - it's bit complicate FOR ME  but i'm working on making command that simply run from anywhere
 
-   -i also describe all decision and ideas about project in ideastruct.md file.
+   - i also describe all decision and ideas about project in ideastruct.md file.
 
-   -i love to write this type of file.
+   - i love to write this type of file.
 
 ###Contribution
 ----------------
--always feel free to help out !whether if's filing bugs and feature request.
--for now, you can add more plugin to project that is one of the important thing.
--for understand the plugin structure refer the README.md in plugin folder.
--you also understand the structure with just seeing commit because when you see commit or diff tool you can get commentary of changes from changes in ideastruct.md on every commit.
+   - always feel free to help out !whether if's filing bugs and feature request.
+   - for now, you can add more plugin to project that is one of the important thing.
+   - for understand the plugin structure refer the README.md in plugin folder.
+   - you also understand the structure with just seeing commit because when you see commit or diff tool you can get commentary of changes from changes in ideastruct.md on every commit.
 
 ###Configuration
 -----------------
--you can configure module that you want to be used in main module by configuring plugin.conf file .
--you can remove name module that also remove support for that website.
+   - you can configure module that you want to be used in main module by configuring plugin.conf file .
+   - you can remove name module that also remove support for that website.
 
 ###contact
 -----------
-mail me: ceaniket@gmail.com
+   - mail me: ceaniket@gmail.com
