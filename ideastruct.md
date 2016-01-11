@@ -112,3 +112,8 @@ correct  that remove errors.
 [+]i will make plugin of google that search lyrics with title and other query user want ,find link from that searchpage and find lyrics.inshort first two function is moved to the google module.
 
 [+]that give us speed to making module for other  website .
+
+[+]now i try to make google search plugin that search with a title that user pass on command line and i use google topical search api that make it very easy
+  to get links of search result.topical search api is give us way to get results form small set of website.
+
+  
