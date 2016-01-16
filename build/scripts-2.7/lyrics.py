@@ -3,7 +3,7 @@ import sys
 import string
 from lyricsar import *
 from lyricsar.plugin import *
-
+import  lyricsar.config
 def main(argv):
     #===============================================================================
     #load available plugin from plugin.conf
@@ -33,8 +33,6 @@ def main(argv):
         #==============================provide search URL===============================
         search_link=lm.get_search()
         print search_link
-
-
 
         url_plug="lyricsmint"
         #===============================================================================

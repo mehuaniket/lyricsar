@@ -3,7 +3,7 @@ import sys
 import string
 from lyricsar import *
 from lyricsar.plugin import *
-
+import  lyricsar.config
 def main(argv):
     #===============================================================================
     #load available plugin from plugin.conf
@@ -33,8 +33,6 @@ def main(argv):
         #==============================provide search URL===============================
         search_link=lm.get_search()
         print search_link
-
-
 
         url_plug="lyricsmint"
         #===============================================================================
@@ -67,21 +65,7 @@ def main(argv):
 
 if __name__ == '__main__': sys.exit(main(sys.argv))
 
-#===============================================================================
-#this whole bunch of line only for offline testing for module
 
-# file_test1=filetest.filetest("test\Search results for tum hi ho.html")
-#
-# file_test2=filetest.filetest("test\MERI AASHIQUI LYRICS - Aashiqui 2.html")
-#
-#
-# link=lm.get_link(file_test1.read())
-# print link
-# lyrics=lm.get_lyrics(file_test2.read())
-# lyrics=sp.removeHTML(lyrics)
-# print lyrics
-
-#===============================================================================
 
 #=======================:information about tags:================================
 # album= tag.album                       # album as string

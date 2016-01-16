@@ -1,5 +1,7 @@
 *.pyc
 \test\
-test\
+/test/
 \build\
 \dist\
+/build/
+/dist/
