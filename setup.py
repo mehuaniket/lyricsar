@@ -14,7 +14,7 @@ setup(
     license='MIT',
     author='Aniket patel',
     author_email='ceaniket@gmail.com',
-    url='http://ceaniket.github.io/lyricsar/index.html',
+    url='http://github.com/ceaniket/lyricsar',
     packages=['lyricsar','lyricsar/plugin'],
     scripts=[
     'lyrics.py'

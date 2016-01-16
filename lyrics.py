@@ -19,7 +19,7 @@ def main(argv):
     #===============================================================================
 
     #============================plugin class init==================================
-    #following lines are process the title and make it song name to pass pluginclass
+    #following lines are process the title pass pluginclass
     #title=tag.title
     if len(argv)>1:
         title=sys.argv[1]
