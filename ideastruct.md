@@ -101,3 +101,4 @@ problem when we get title from a song and some time things going complicated.
 [+]rebase mashup the project but i install package in my own computer that all important files backup from there 
 
 [+] first feature added to project ,now we handle error with errorlist module that give proper description of error with error no.
+[+]now target is modify google plugin and make that working properly.

@@ -5,63 +5,62 @@ from lyricsar import *
 from lyricsar.plugin import *
 import  lyricsar.config
 def main(argv):
-    #===============================================================================
-    #load available plugin from plugin.conf
+#===============================================================================
+#load available plugin from config.py
     plugin=config.PLUGIN
-    #===============================================================================
+#===============================================================================
 
-    #=================================class init====================================
-    #this class have function that can process string object in way we need
+#===============================class init======================================
+#this class have function that can process string object in way we need!
     sp=strprocess.strprocess()
-    #pagegetter class that used when we want to work with INTERNET-PAGE_UP_DOWN
+#pagegetter class that used when we want to download stuff from INTERNET
     pg=pagegetter.pagegetter()
 
-    #===============================================================================
+#===============================================================================
 
-    #============================plugin class init==================================
-    #following lines are process the title pass pluginclass
-    #title=tag.title
+#===========================[LOAD GOOGLE PLUGIN]================================
     if len(argv)>1:
         title=sys.argv[1]
         title=sp.addplus(title)
 
-        #initialize lyricsmint class that used to process page and get lyrics .
-        lm=google.google(title)
+#initialize google plugin class that used to process page and get lyrics .
+        gogle=google.google(title)
 
-        #===============================================================================
+#===============================================================================
 
-        #==============================provide search URL===============================
-        search_link=lm.get_search()
+#=========================[provide search from google]==========================
+        search_link=gogle.get_search()
         print search_link
-
+        searchpage=pg.get_pagedata(search_link)
+        lyricsite = gogle.get_link(searchpage)
         url_plug="lyricsmint"
-        #===============================================================================
-        #============================load object on fly=================================
-        for URL in plugin:
-            find=string.find(search_link,URL)
+#===============================================================================
+#=======================[check url for avilable plugin]=========================
+        for site in plugin:
+            find=string.find(lyricsite,site)
             if find>-1:
-                url_plug=URL
+                url_plug=site
                 break;
 
 
-        #=======================load compatible module on the fly=======================
-        creator="gm="+url_plug+"."+url_plug+"('"+title+"')"
+#====================[load compatible module on the fly]========================
+        creator="ls="+url_plug+"."+url_plug+"('"+title+"')"
         print creator
         exec(creator)
-        #===============================================================================
+#===============================================================================
 
-        #===============================================================================
-        #this block is get lyrics from INTERNET
-        search_page=pg.get_pagedata(search_link)
-        link=gm.get_link(search_page)
-        print link
-        lyrics_page=pg.get_pagedata(link)
-        lyrics=gm.get_lyrics(lyrics_page)
+#===============================================================================
+#this block is get lyrics from INTERNET
+        #search_page=pg.get_pagedata(search_link)
+        #link=ls.get_link(search_page)
+        #print link
+        lyrics_page=pg.get_pagedata(lyricsite)
+        lyrics=ls.get_lyrics(lyrics_page)
         lyrics=sp.removeHTML(lyrics)
         print lyrics
     else:
         print "usage of lyrics.py\n $ lyrics.py [title of the song]"
-    #===============================================================================
+#===============================================================================
 
 if __name__ == '__main__': sys.exit(main(sys.argv))
 
