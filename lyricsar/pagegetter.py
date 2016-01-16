@@ -1,6 +1,7 @@
 
 import urllib2
 import sys
+from errorlist import errorlist
 class pagegetter:
    """provide html data or other internet things on the request"""
    def __init__(self):
@@ -11,13 +12,11 @@ class pagegetter:
        try:
            self.url=url
            req = urllib2.urlopen(self.url)
-           #response = urllib2.urlopen(req)
            the_page = req.read()
            return the_page
-       except(urllib2.URLError,urllib2.HTTPErrorProcessor):
-           return  "URL error"
+
        except:
-           return "URL error" 
+           sys.exit(errorlist['0e01'])
 
 
 

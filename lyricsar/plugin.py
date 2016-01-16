@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup
-from filetest import filetest
+#from filetest import filetest
 import string
 import sys
 

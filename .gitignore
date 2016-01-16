@@ -1,6 +1,5 @@
 *.pyc
-<<<<<<< HEAD
 \test\
-=======
 test\
->>>>>>> cmd
+\build\
+\dist\
