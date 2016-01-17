@@ -2,11 +2,10 @@
 import string
 import sys
 import urllib
-import simplejson
 import json
+import httplib
 from bs4 import BeautifulSoup
 from setting import GOOGLE_API_URL
-from lyricsar.pagegetter import pagegetter
 from lyricsar.errorlist import errorlist
 class google:
     response=""
@@ -25,6 +24,7 @@ class google:
         """get_link fetch first link from google results """
         try:
             results = json.loads(searchpage)
+            print results
             return results
         except:
             sys.exit(errorlist['0e02'])
@@ -35,7 +35,7 @@ if __name__=="__main__":
 
     gogle=google("meherbaan+lyrics")
     url=gogle.get_search()
-    pagegetter=pagegetter()
-    searchpage=pagegetter.get_pagedata(url)
-    jsonfile=gogle.get_link(searchpage)
-    print jsonfile
+    htp=httplib.Http()
+    response,searchpage=htp.request(url,'GET')
+    lyrcweb=gogle.get_link(searchpage)
+    print lyrcweb

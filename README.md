@@ -1,5 +1,7 @@
 #lyricsar version 0.3.0
 
+> " A Man Can Do as he Will, but not Will as he Will " :)
+
 ###CONTENTS OF THIS FILE
 ---------------------
 
@@ -14,11 +16,12 @@
 ----------------
   - project have very simple purpose that fetches lyrics from the the specific website( means if plugin is available for website)
   - you can add your plugin for any website, but you need to understand structure of plugin .
-  - i also want add player on terminal library which can play song in current dir in and pass the title of mp3 directly to script that fetches lyrics for song!!
-  - i think this project is for developer's only because it's pathetic to use! :)
+  - I also want add player on terminal library which can play song in current dir in and pass the title of mp3 directly to script that fetches lyrics for song!!
+  - I think this project is for programmer's only if you are not, it's pathetic to use! :)
 
 ###Requirements
 ----------------
+  - first'n first you need python 2.7 :)
   - you need to install BeautifulSoup library.
 
  ```
@@ -29,28 +32,36 @@ or
  $ pip install beautifulsoup4
 
  ```
+  - also need to install  simplejson library.
 
-  - it's great or been easy if you use ubuntu or other linux flavour!
+  ```
+  $ apt-get install python-simplejson
+ or
+  $ easy_install simplejson
+ or
+  $ pip install simplejson
+
+  ```
+  - it's great and make easy if you use ubuntu or other linux flavour!
 
 ###Installation
 ----------------
 
-   - to install project in your computer download project zip and run setup script.
+  - to install project in your computer download project zip and run setup script.
 
  ```
  $ python setup.py install
 
  ```
 
-   - project automatically install script that run from anywhere!like following!
+  - project automatically install script that run from anywhere like following!
 
  ```
  $ lyrics.py [title of the song]
 
  ```
 
-
-   - i also describe all decision and ideas about project in ideastruct.md file.i love to write this type of file.
+  - I also describe all decisions and ideas about project in ideastruct.md file.i love to write this type of file.
 
 ###Contribution
 ----------------
@@ -66,4 +77,4 @@ or
 
 ###Contact
 -----------
-mail me: ceaniket@gmail.com
+>mail me: ceaniket@gmail.com
