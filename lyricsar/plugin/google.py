@@ -1,8 +1,8 @@
 
 import string
 import sys
-import urllib
-import json
+import urllib2
+import simplejson
 import httplib
 from bs4 import BeautifulSoup
 from setting import GOOGLE_API_URL
@@ -23,19 +23,25 @@ class google:
     def get_link(self,searchpage):
         """get_link fetch first link from google results """
         try:
-            results = json.loads(searchpage)
+            results = simplejson.load(searchpage)
             print results
             return results
         except:
             sys.exit(errorlist['0e02'])
 
-
 #================================ tesing =======================================
-if __name__=="__main__":
+if __name__ =="__main__":
 
     gogle=google("meherbaan+lyrics")
     url=gogle.get_search()
-    htp=httplib.Http()
-    response,searchpage=htp.request(url,'GET')
+    request=urllib2.Request(url,None,{'Referer':'www.lyricsmint.com'})
+    print url
+    proxy = urllib2.ProxyHandler({'http': 'http://mh514uvamp1-16:1434@10.0.0.5:8080'})
+    auth = urllib2.HTTPBasicAuthHandler()
+    opener = urllib2.build_opener(proxy, auth, urllib2.HTTPHandler)
+    urllib2.install_opener(opener)
+
+    searchpage=urllib2.urlopen(request)
+    print searchpage
     lyrcweb=gogle.get_link(searchpage)
     print lyrcweb
