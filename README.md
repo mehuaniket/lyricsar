@@ -1,4 +1,4 @@
-#lyricsar version 0.3.0
+#lyricsar version 0.4.0-alpha
 
 > " A Man Can Do as he Will, but not Will as he Will " :)
 
@@ -43,6 +43,7 @@ or
 
   ```
   - it's great and make easy if you use ubuntu or other linux flavour!
+  - if you get an error on if other neccessary library not available, you need to install as above!
 
 ###Installation
 ----------------
@@ -61,7 +62,7 @@ or
 
  ```
 
-  - I also describe all decisions and ideas about project in ideastruct.md file.i love to write this type of file.
+  - I also describe all decisions and ideas about project in ideastruct.md file,ove to write this type of file.
 
 ###Contribution
 ----------------
@@ -77,4 +78,5 @@ or
 
 ###Contact
 -----------
->mail me: ceaniket@gmail.com
+> mail me: ceaniket@gmail.com
+> [fork me on github](https://github.com/ceaniket/lyricsar)
