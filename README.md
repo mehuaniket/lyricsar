@@ -1,28 +1,28 @@
-#lyricsar version 0.4.0-alpha
-
+# lyricsar version 0.4.0-alpha
+with fast performance
 > " A Man Can Do as he Will, but not Will as he Will " :)
 
-###CONTENTS OF THIS FILE
+CONTENTS OF THIS FILE
 ---------------------
 
  * Introduction
  * Requirements
  * Installation
- * Contribution
  * Configuration
+ * Contribution
  * contact
 
-###Introduction
+Introduction
 ----------------
   - project have very simple purpose that fetches lyrics from the the specific website( means if plugin is available for website)
   - you can add your plugin for any website, but you need to understand structure of plugin .
   - I also want add player on terminal library which can play song in current dir in and pass the title of mp3 directly to script that fetches lyrics for song!!
   - I think this project is for programmer's only if you are not, it's pathetic to use! :)
 
-###Requirements
+Requirements
 ----------------
   - first'n first you need python 2.7 :)
-  - you need to install BeautifulSoup library.
+  - you need to install BeautifulSoup library if not come with default installation.
 
  ```
  $ apt-get install python-bs4
@@ -32,20 +32,11 @@ or
  $ pip install beautifulsoup4
 
  ```
-  - also need to install  simplejson library.
 
-  ```
-  $ apt-get install python-simplejson
- or
-  $ easy_install simplejson
- or
-  $ pip install simplejson
-
-  ```
-  - it's great and make easy if you use ubuntu or other linux flavour!
+  - it's great and make easy if you use ubuntu or other linux dist!
   - if you get an error on if other neccessary library not available, you need to install as above!
 
-###Installation
+Installation
 ----------------
 
   - to install project in your computer download project zip and run setup script.
@@ -58,26 +49,25 @@ or
   - project automatically install script that run from anywhere like following!
 
  ```
- $ lyrics.py [title of the song]
+ $ lyrics.py "title of the song"
 
  ```
 
   - I also describe all decisions and ideas about project in ideastruct.md file,ove to write this type of file.
 
-###Contribution
+Configuration
+-----------------
+  - you can configure the project with file name setting.py .
+  - you can remove name of module that also remove support for that website.
+
+Contribution
 ----------------
 - always feel free to help out !whether if's filing bugs and feature request.
-- for now, you can add more plugin to project that is one of the important thing.
-- for understand the plugin structure refer the README.md in plugin folder.
-- you also understand the structure with just seeing commit because when  you see commit or diff tool you can get commentary of changes that changes in ideastruct.md on every commit.
+- for now, you can add more plugin kind methods to project that is one of the important thing.
 
-###Configuration
------------------
-- you can configure the project with file name config.py .
-- you can remove name of module that also remove support for that website.
 
-###Contact
+
+Contact
 -----------
 > mail me: ceaniket@gmail.com
-
 > [fork me on github](https://github.com/ceaniket/lyricsar)
