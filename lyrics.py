@@ -5,22 +5,31 @@ import string
 from lyricsar import plugin,google
 from lyricsar.setting import PLUGIN
 import os
+import subprocess
 
 def main(argv):
 #===========================[LOAD GOOGLE PLUGIN]================================
     if len(argv)>1:
         if sys.argv[1]=="play":
             os.system("rhythmbox-client --play &")
+
         elif sys.argv[1]=="pause":
             os.system("rhythmbox-client --pause")
+
         elif sys.argv[1]=="next":
             os.system("rhythmbox-client --next")
+
         elif sys.argv[1]=="playinfo":
             os.system("rhythmbox-client --print-playing")
+
         elif sys.argv[1]=="playtitle":
             os.system("rhythmbox-client --print-playing-format=%tt")
+
         elif sys.argv[1]=="playlyrics":
-            title=os.system("title=rhythmbox-client --print-playing-format=%tt")
+            title= os.popen("rhythmbox-client --print-playing-format=%tt").read()
+            # title=subprocess.check_output(["rhythmbox-client","--print-playing-format=%tt"])
+            # proc = subprocess.Popen("rhythmbox-client --print-playing-format=%tt", stdout=subprocess.PIPE)
+            # title = proc.stdout.read()
             lyricsite=google.getLinkUrl(title)
             print lyricsite
             for web in PLUGIN:
