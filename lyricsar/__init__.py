@@ -1,4 +1,4 @@
-__doc__="""plugin directory is use to store plugin of diffrent website \
-inside a single directory"""
+__doc__="""provide support for google search api with google.py and \
+plugin.py provide lyrics if method is available for that website"""
 
-__all__=['google','lyricsmint']
+__all__=['google','plugin']

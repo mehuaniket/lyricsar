@@ -12,7 +12,6 @@ def main(argv):
         title=sys.argv[1]
         lyricsite=google.getLinkUrl(title)
         print lyricsite
-#===============================================================================
         for web in PLUGIN:
             find=string.find(lyricsite,web)
             if find>-1:

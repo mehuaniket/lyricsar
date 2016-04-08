@@ -19,7 +19,7 @@ def get_lyricsmint(url):
     soup = BeautifulSoup(html_lyrics, 'html.parser')
     songlyric=soup.find_all("div", id="lyric")
     lyrics= songlyric[0].find_all("p")
-    print lyrics
+    return lyrics
 
 def get_azlyrics(url):
         """ get_lyrics received a lyricspagepage that fetch fro url provide by
@@ -36,4 +36,4 @@ def get_azlyrics(url):
         soup = BeautifulSoup(html_lyrics, 'html.parser')
         songlyric=soup.find_all("div" ,class_=None)
         soup = BeautifulSoup(str(songlyric[1]), 'html.parser')
-        return str(soup.get_text())
+        return soup.get_text()
