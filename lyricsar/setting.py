@@ -6,8 +6,8 @@ azlyrics_URL='http://search.azlyrics.com/search.php?q='
 
 PROXY_LIST = []
 
-proxy_enable=False
+proxy_enable=True
 
-proxy_url="http://user:pass@proxy:port"
+proxy_url="http://mh514uvamp1-16:1434@10.0.0.5:1434"
 
 PLUGIN=["lyricsmint","azlyrics"]

@@ -14,7 +14,7 @@ CONTENTS OF THIS FILE
 
 Introduction
 ----------------
-  - project have very simple purpose that fetches lyrics from the the specific website( means if plugin is available for website)
+  - project have very simple purpose that fetches lyrics from the the specific website( means if plugin_method is available for website)
   - you can add your plugin for any website, but you need to understand structure of plugin .
   - I also want add player on terminal library which can play song in current dir in and pass the title of mp3 directly to script that fetches lyrics for song!!
   - I think this project is for programmer's only if you are not, it's pathetic to use! :)
