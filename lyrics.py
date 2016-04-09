@@ -26,9 +26,9 @@ def main(argv):
             os.system("rhythmbox-client --print-playing-format=%tt")
 
         elif sys.argv[1]=="playlyrics":
-            # title= os.popen("rhythmbox-client --print-playing-format=%tt").read()
-            # title=subprocess.check_output(["rhythmbox-client","--print-playing-format=%tt"])
+
             title, error = subprocess.Popen(["rhythmbox-client", "--print-playing-format=%tt"], stdout=subprocess.PIPE,stderr=subprocess.PIPE).communicate()
+            getby="none"
             lyricsite=google.getLinkUrl(title)
             print lyricsite
             for web in PLUGIN:
@@ -39,12 +39,13 @@ def main(argv):
                 print plugin.get_lyricsmint(lyricsite)
             elif getby=="azlyrics":
                 print plugin.get_azlyrics(lyricsite)
-            else:
+            elif getby=="none":
                 print "plugin is not available for website"
 
         else:
-            getby="none"
+
             title=sys.argv[1]
+            getby="none"
             lyricsite=google.getLinkUrl(title)
             print lyricsite
             for web in PLUGIN:
