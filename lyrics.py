@@ -44,6 +44,7 @@ def main(argv):
                 print "plugin is not available for website"
 
         else:
+            getby="none"
             title=sys.argv[1]
             lyricsite=google.getLinkUrl(title)
             print lyricsite
@@ -55,7 +56,7 @@ def main(argv):
                 print plugin.get_lyricsmint(lyricsite)
             elif getby=="azlyrics":
                 print plugin.get_azlyrics(lyricsite)
-            else:
+            elif getby=="none":
                 print "plugin is not available for website"
 
 

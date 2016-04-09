@@ -3,7 +3,7 @@ from distutils.core import setup
 
 setup(
     name='lyricsar',
-    version='0.3.0',
+    version='0.5.0',
     description='lyrics fetcher from website',
     long_description='''lyricsar is a tool for extracting lyrics from website.
                         Unlike other tools, it focuses entirely on getting
