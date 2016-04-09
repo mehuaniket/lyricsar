@@ -1,4 +1,4 @@
-# lyricsar version 0.5.0
+# lyricsar version 0.7
 with fast performance and better terminal option
 > " A Man Can Do as he Will, but not Will as he Will " :)
 
@@ -59,6 +59,7 @@ Configuration
 -----------------
   - you can configure the project with file name setting.py .
   - you can remove name of module that also remove support for that website.
+  - also enable or disable proxy in setting.py file.
 
 Contribution
 ----------------
