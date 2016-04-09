@@ -1,5 +1,5 @@
-# lyricsar version 0.4.0-alpha
-with fast performance
+# lyricsar version 0.5.0
+with fast performance and better terminal option
 > " A Man Can Do as he Will, but not Will as he Will " :)
 
 CONTENTS OF THIS FILE
