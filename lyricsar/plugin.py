@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import string
 import sys
-from setting import LYRICSMINT_URL,proxy_enable,proxy_url
+from setting import proxy_enable,proxy_url
 import urllib2
 
 

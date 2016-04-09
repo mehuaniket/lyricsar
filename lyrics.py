@@ -26,10 +26,9 @@ def main(argv):
             os.system("rhythmbox-client --print-playing-format=%tt")
 
         elif sys.argv[1]=="playlyrics":
-            title= os.popen("rhythmbox-client --print-playing-format=%tt").read()
+            # title= os.popen("rhythmbox-client --print-playing-format=%tt").read()
             # title=subprocess.check_output(["rhythmbox-client","--print-playing-format=%tt"])
-            # proc = subprocess.Popen("rhythmbox-client --print-playing-format=%tt", stdout=subprocess.PIPE)
-            # title = proc.stdout.read()
+            title, error = subprocess.Popen(["rhythmbox-client", "--print-playing-format=%tt"], stdout=subprocess.PIPE,stderr=subprocess.PIPE).communicate()
             lyricsite=google.getLinkUrl(title)
             print lyricsite
             for web in PLUGIN:
